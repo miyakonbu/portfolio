@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+/* cssリセット */
+
+/*利用するタグによってこちらの内容は増やす*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h3,
+p {
+  margin: 0;
+}
+
+dl,
+dt,
+dd,
+ul {
+  list-style: none;
+}
+
+dd {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: inherit;
+  font-weight: normal;
+  color: inherit;
+}
+
+/* body {
+  text-align: center;
+} */
+
+li {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+a {
+  /*下線を消す*/
+  text-decoration: none;
+  /*色を消す*/
+  color: inherit;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
+ul {
+  /*左の「・」を消す*/
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  border: none;
+}
