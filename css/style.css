@@ -6,25 +6,26 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   font-feature-settings: "palt";
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* ヘッダー */
-#header {
-  max-width: 1600px;
+header {
+  max-width: 1000px;
   position: relative;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
 }
 
 .pc_nav {
   margin-top: 90px;
-  margin-right: 255px;
+  margin-right: 10%;
 }
 
 .pc_nav ul {
   display: flex;
   gap: 75px;
   justify-content: end;
+  align-items: center;
 }
 
 .pc_nav li {
@@ -33,6 +34,10 @@ body {
   font-weight: 600;
   font-style: normal;
   letter-spacing: 0.1em;
+}
+
+.pc_nav li img {
+  padding-bottom: 8px;
 }
 
 .fv {
@@ -53,7 +58,7 @@ body {
 
 h1 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 80px;
+  font-size: 42px;
   font-weight: 600;
   font-style: normal;
   letter-spacing: 0.075em;
@@ -131,16 +136,30 @@ h1 {
   position: relative;
 }
 
-.circle-arrow::after {
-  content: "";
+.circle-arrow span {
+  display: inline-block;
   width: 10px;
-  height: 10px;
-  border-top: 0.7px solid white;
-  border-right: 0.7px solid white;
+  height: 0.7px;
+  background-color: #ffffff;
+  position: relative;
+  top: -8px;
+  left: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.circle-arrow span::after {
+  content: "";
+  width: 5px;
+  height: 0.7px;
+  background-color: #ffffff;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  top: calc(50% - 0.35px);
+  right: 0px;
+  transform: rotate(45deg);
+  transform-origin: calc(100% - 0.35px) 50%;
+}
+.arrow:hover .circle-arrow span {
+  background-color: #336666;
 }
 
 /* WORKS */
@@ -178,10 +197,19 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+}
+
+.worksimg_banner.square {
+  max-width: 430px;
+}
+
+.worksimg_banner.rect {
+  max-width: 600px;
 }
 
 .worksimg_mock {
-  width: 588px;
+  max-width: 588px;
   margin: 0 auto;
 }
 
@@ -222,17 +250,18 @@ h1 {
 }
 
 .introimg {
-  margin-right: 84px;
+  margin-right: 70px;
+  width: 40%;
 }
 
 .introimg > img {
   margin-bottom: 10px;
   object-fit: cover;
-  height: 810px;
+  height: 100%;
 }
 
 .introtext {
-  width: 776px;
+  width: 50%;
   background-color: #ffffff;
   padding: 55px 80px;
   font-size: 20px;
