@@ -331,7 +331,6 @@ footer {
 .pc_nav_footer ul {
   display: flex;
   gap: 55px;
-  /* justify-content: start; */
   align-items: center;
   padding: 0;
 }
@@ -375,7 +374,7 @@ footer {
 #about_me {
   position: relative;
   max-width: 1200px;
-  margin-top: 60px auto 0 auto;
+  margin: 60px auto;
 }
 
 #about_me h1 {
@@ -558,7 +557,7 @@ footer {
 #works_life {
   position: relative;
   max-width: 1200px;
-  margin: 60px auto;
+  margin: 120px auto;
 }
 
 .works_life-logo {
@@ -584,7 +583,6 @@ footer {
   position: absolute;
   top: -45px;
   left: -24px;
-  /* padding-left: 30px; */
   z-index: -1;
   overflow: hidden;
 }
@@ -629,18 +627,68 @@ footer {
   z-index: -1;
 }
 
-/* .works_detail_overview {
-  margin-top: 50px;
-} */
-
-/* .works_detail_overview {
-  margin-top: 60px;
-} */
-
 .works_detail_overview p {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-top: 35px;
   z-index: 0;
+}
+
+.pdc_obj_description {
+  max-width: 1000px;
+  display: flex;
+  flex-flow: column;
+}
+
+.objective {
+  display: flex;
+}
+
+.objective dt {
+  width: 20%;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.objective dd {
+  width: 75%;
+}
+
+.objective p {
+  margin-bottom: 20px;
+}
+
+.footershape {
+  position: absolute;
+  right: 500px; /* 左右からの位置指定 */
+  top: -200px; /* 上からの位置指定 */
+  z-index: -1;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+#thanks {
+  max-width: 1200px;
+  margin: 150px auto;
+  text-align: center;
+  position: relative;
+}
+
+.footershape_thanks {
+  position: absolute;
+  right: 50px; /* 左右からの位置指定 */
+  top: -200px; /* 上からの位置指定 */
+  z-index: -1;
+  max-width: 450px;
+  overflow: hidden;
+}
+
+.thanksshape {
+  position: absolute;
+  left: -100px; /* 左右からの位置指定 */
+  top: -150px; /* 上からの位置指定 */
+  z-index: -1;
+  max-width: 350px;
+  overflow: hidden;
 }
