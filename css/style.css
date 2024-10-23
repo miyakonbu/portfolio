@@ -16,6 +16,7 @@ header {
   margin: 0 auto;
 }
 
+/* PCのナビ */
 .pc_nav {
   margin-top: 40px;
   margin-right: 10%;
@@ -40,6 +41,101 @@ header {
   padding-bottom: 6px;
   width: 16px;
 }
+
+/* ハンバーガーメニュー */
+.hamb {
+  position: fixed;
+  cursor: pointer;
+  z-index: 2;
+  right: 200px;
+  top: 50px;
+  width: 23px;
+  height: 22px;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  border-radius: 50px;
+  background: #003333;
+}
+
+.black-bg ul {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.black-bg ul li {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.black-bg ul li a {
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  text-decoration: none;
+}
+
+.line {
+  position: absolute;
+  left: 13px;
+  width: 27px;
+  height: 3px;
+  background-color: #ffffff;
+  top: 15px;
+}
+
+.line:nth-child(2) {
+  top: 24px;
+}
+
+.line:nth-child(3) {
+  top: 33px;
+}
+
+.black-bg {
+  position: fixed;
+  background: #fb7878;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
+.black-bg.open {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+#hamb.active .line {
+  background-color: #fff;
+}
+
+/*アニメーション*/
+.black-bg {
+  transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+}
+#hamb.active .line:nth-child(1) {
+  transform: translateY(9px) translateX(0) rotate(45deg);
+}
+#hamb.active .line:nth-child(2) {
+  opacity: 0;
+  background: #fff;
+}
+#hamb.active .line:nth-child(3) {
+  transform: translateY(-9px) translateX(0) rotate(-45deg);
+}
+.animation {
+  transition: all 0.6s;
+}
+/* ハンバーガーメニューここまで */
 
 .fv {
   position: relative;
@@ -537,7 +633,7 @@ footer {
 .contactshape01 {
   position: absolute;
   right: -650px; /* 左右からの位置指定 */
-  top: 900px; /* 上からの位置指定 */
+  top: 300px; /* 上からの位置指定 */
   z-index: -1;
   max-width: 600px;
   overflow: hidden;
@@ -548,8 +644,20 @@ footer {
   left: -400px; /* 左右からの位置指定 */
   top: 60px; /* 上からの位置指定 */
   z-index: -1;
-  max-width: 500px;
+  max-width: 400px;
   overflow: hidden;
+}
+
+.contact {
+  display: flex;
+  flex-flow: column;
+}
+
+.c-form__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-bottom: 20px;
 }
 
 /* WORKS 美容室LIFE */
