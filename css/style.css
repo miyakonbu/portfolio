@@ -46,7 +46,7 @@ header {
 .hamb {
   position: fixed;
   cursor: pointer;
-  z-index: 2;
+  z-index: 200;
   right: 200px;
   top: 50px;
   width: 23px;
@@ -98,20 +98,22 @@ header {
 
 .black-bg {
   position: fixed;
-  background: #fb7878;
-  top: 0;
-  left: 0;
-  width: 80%;
+  background: #fb787890;
+  top: 50%;
+  left: 50%;
+  width: 98%;
   height: 0%;
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
+  transform: translate(-50%, -50%);
+  z-index: 100;
 }
 
 .black-bg.open {
   opacity: 1;
   visibility: visible;
-  height: 100%;
+  height: 98%;
 }
 
 #hamb.active .line {
@@ -658,6 +660,22 @@ footer {
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 20px;
+}
+
+.c-form__label,
+.c-form__input {
+  padding: 10px;
+}
+
+.c-form__label {
+  width: 90%;
+}
+
+.c-form__input {
+  width: 90%;
+  font-size: 16px;
+  border: solid 1px #333;
+  border-radius: 4px;
 }
 
 /* WORKS 美容室LIFE */
