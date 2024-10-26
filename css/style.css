@@ -629,7 +629,8 @@ footer {
 .contact_text {
   margin: 30px auto;
   text-align: left;
-  width: 500px;
+  line-height: 2;
+  width: 78%;
 }
 
 .contactshape01 {
@@ -653,29 +654,66 @@ footer {
 .contact {
   display: flex;
   flex-flow: column;
+  margin-top: 60px;
 }
 
 .c-form__item {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .c-form__label,
 .c-form__input {
-  padding: 10px;
+  padding: 6px;
 }
 
 .c-form__label {
-  width: 90%;
+  width: 30%;
+  text-align: left;
 }
 
 .c-form__input {
-  width: 90%;
-  font-size: 16px;
+  width: 55%;
+  font-size: 14px;
   border: solid 1px #333;
   border-radius: 4px;
+}
+
+.c-form__input:focus-visible {
+  outline: rgba(0, 51, 51, 1) auto 1px;
+}
+
+.c-form__required {
+  color: #fff;
+  font-size: 12px;
+  background-color: rgba(0, 51, 51, 0.5);
+  border-radius: 4px;
+  padding: 2px 3px;
+  margin: 0 0 0 18px;
+}
+
+textarea.c-form__input {
+  height: 150px;
+}
+
+.c-form__submit button {
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  background-color: rgba(0, 51, 51, 0.5);
+  border: none;
+  border-radius: 4px;
+  padding: 5px 44px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.c-form__submit button:hover {
+  color: rgba(0, 51, 51, 0.5);
+  border: solid 1px rgba(0, 51, 51, 0.5);
+  background-color: transparent;
 }
 
 /* WORKS 美容室LIFE */

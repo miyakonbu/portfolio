@@ -87,32 +87,32 @@
         </h2>
         <div class="contactshape01"><img src="./images/_shape05_.png"></div>
         <div class="contactshape02"><img src="./images/_shape04_.png"></div>
-        <div class="contact_text">
-            <P>お仕事のご依頼やお問合せなどはこちらのフォームから承っております。<br>
-                お気軽にお声かけください。</P>
-        </div>
+        <P class="contact_text">お仕事のご依頼やお問合せなどはこちらのフォームから承っております。<br>
+            お気軽にお声かけください。</P>
         <!-- <div class="form-container"> -->
         <form class="contact"
             action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfk8i_Xzq8zdpzHTxGNMmycGEVqGqV6mJF5_pOEi_dRRfz77g/formResponse"
             method="POST" target="hidden_iframe_blank" onsubmit="submitted=true;">
             <div class="c-form__item">
-                <label class="c-form__label" for="name">お名前:<span>（※必須）</span></label>
+                <label class="c-form__label" for="name">お名前<span class="c-form__required">※必須</span></label>
                 <input class="c-form__input" type="text" id="name" name="entry.1122054875" required>
             </div>
             <div class="c-form__item">
-                <label class="c-form__label" for="name">電話番号:<span>（※必須）</span></label>
+                <label class="c-form__label" for="name">電話番号<span class="c-form__required">※必須</span></label>
                 <input class="c-form__input" type="text" id="phonenumber" name="entry.58238205" required>
             </div>
             <div class="c-form__item">
-                <label class="c-form__label" for="email">メールアドレス:<span>（※必須）</span></label>
+                <label class="c-form__label" for="email">メールアドレス<span class="c-form__required">※必須</span></label>
                 <input class="c-form__input" type="email" id="email" name="entry.1807386152" required>
             </div>
             <div class="c-form__item">
-                <label class="c-form__label" for="message">お問い合わせ内容:<span>（※必須）</span></label>
+                <label class="c-form__label" for="message">お問い合わせ内容<span class="c-form__required">※必須</span></label>
                 <textarea class="c-form__input" id="message" name="entry.18047756" required>
             </textarea>
             </div>
-            <button type="submit">送信する</button>
+            <div class="c-form__submit">
+                <button type="submit">送信する</button>
+            </div>
         </form>
         <script type="text/javascript">
             var submitted = false;
