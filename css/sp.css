@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* スマホ版 */
+
+@media screen and (max-width: 850px) {
+  .pc_nav {
+    display: none;
+  }
+
+  .fv {
+    flex-direction: column;
+    margin-top: 120px;
+  }
+
+  .airplane {
+    width: 100%;
+  }
+
+  .scroll {
+    display: none;
+  }
+
+  .fv {
+    padding: 0 10px 0 10px;
+  }
+
+  h1 {
+    font-size: 50px;
+  }
+
+  .w_letter {
+    font-size: 20px;
+    margin-top: 16px;
+  }
+
+  /* ABOUT */
+  #about {
+    width: 100%;
+    margin: 250px auto 0;
+    padding: 0 10px 0 10px;
+  }
+
+  .message {
+    font-size: 28px;
+  }
+
+  .message_sp {
+    font-size: 14px;
+    line-height: 2.75;
+    letter-spacing: 0.2em;
+    margin-top: 40px;
+  }
+
+  .message01 {
+    display: none;
+  }
+}
