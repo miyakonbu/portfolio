@@ -228,14 +228,15 @@ h1 {
 .message01 {
   font-size: 16px;
   /* font-weight: 300; */
+  display: block;
   line-height: 2.75;
   letter-spacing: 0.2em;
   margin-top: 40px;
 }
 
-/* .message_sp {
+.message_sp {
   display: none;
-} */
+}
 
 .viewmore {
   justify-content: flex-end;

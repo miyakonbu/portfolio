@@ -44,14 +44,15 @@
     font-size: 28px;
   }
 
+  .message01 {
+    display: none;
+  }
+
   .message_sp {
     font-size: 14px;
+    display: block;
     line-height: 2.75;
     letter-spacing: 0.2em;
     margin-top: 40px;
-  }
-
-  .message01 {
-    display: none;
   }
 }
