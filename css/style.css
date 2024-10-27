@@ -47,7 +47,7 @@ header {
   position: fixed;
   cursor: pointer;
   z-index: 200;
-  right: 200px;
+  right: 5%;
   top: 50px;
   width: 23px;
   height: 22px;
@@ -61,22 +61,30 @@ header {
   margin: 0;
   padding: 0;
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 20%;
+  top: 65%;
   transform: translate(-50%, -50%);
 }
 
 .black-bg ul li {
-  text-align: center;
+  text-align: left;
   padding: 20px 0;
 }
 
 .black-bg ul li a {
-  color: #000;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 400;
+  border-left: 5px solid #fff; /*線の設定*/
+  padding: 6px 0 1px 15px; /*余白の設定 */
   display: block;
   text-decoration: none;
+}
+
+.black-bg li img {
+  padding-bottom: 6px;
+  width: 18px;
 }
 
 .line {
@@ -98,10 +106,10 @@ header {
 
 .black-bg {
   position: fixed;
-  background: #fb787890;
+  background: #fb7878;
   top: 50%;
   left: 50%;
-  width: 98%;
+  width: 80%;
   height: 0%;
   opacity: 0;
   visibility: hidden;
@@ -111,9 +119,9 @@ header {
 }
 
 .black-bg.open {
-  opacity: 1;
+  opacity: 0.92;
   visibility: visible;
-  height: 98%;
+  height: 90%;
 }
 
 #hamb.active .line {
@@ -121,9 +129,14 @@ header {
 }
 
 /*アニメーション*/
-.black-bg {
+/* .black-bg {
   transition: opacity 0.35s, visibility 0.35s, width 0.35s;
+} */
+
+.black-bg {
+  transition: opacity 0.35s, width 0.35s;
 }
+
 #hamb.active .line:nth-child(1) {
   transform: translateY(9px) translateX(0) rotate(45deg);
 }
@@ -147,7 +160,7 @@ header {
 }
 
 .airplane {
-  width: 44%;
+  width: 50%;
 }
 
 .fvshape {
@@ -718,13 +731,14 @@ textarea.c-form__input {
 
 /* WORKS 美容室LIFE */
 
-#works_life {
+#works_life,
+#works_bn001 {
   position: relative;
   max-width: 1200px;
   margin: 120px auto;
 }
 
-.works_life-logo {
+.works_container-logo {
   display: flex;
   flex-flow: column;
   margin: 0 auto;
@@ -801,7 +815,7 @@ textarea.c-form__input {
 
 .pdc_obj_description {
   max-width: 1000px;
-  margin: 30px auto;
+  margin: 60px auto;
   display: flex;
   flex-flow: column;
 }
@@ -831,6 +845,21 @@ textarea.c-form__input {
   z-index: -1;
   max-width: 600px;
   overflow: hidden;
+}
+
+/* works 激旨バーガーバナー */
+
+.bn_img {
+  display: block;
+  max-width: 600px;
+  margin: 10px auto 30px auto;
+}
+
+.bn_img02 {
+  display: block;
+  object-fit: contain;
+  /* max-width: 744px; */
+  margin: 10px auto 30px auto;
 }
 
 /* サンクスぺージ */
