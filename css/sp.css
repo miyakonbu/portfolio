@@ -35,24 +35,53 @@
 
   /* ABOUT */
   #about {
-    width: 100%;
-    margin: 250px auto 0;
+    max-width: 850px;
+    margin: 200px auto 0;
     padding: 0 10px 0 10px;
   }
 
   .message {
-    font-size: 28px;
+    font-size: 22px;
   }
 
   .message01 {
     display: none;
   }
 
-  .message_sp {
+  .message01_sp {
     font-size: 14px;
     display: block;
     line-height: 2.75;
     letter-spacing: 0.2em;
     margin-top: 40px;
+  }
+
+  span {
+    display: inline-block;
+  }
+
+  .pc {
+    display: none;
+  }
+
+  #works {
+    max-width: 850px;
+    padding: 0 10px 0 10px;
+  }
+
+  .workscontainer {
+    flex-direction: column;
+  }
+
+  .worksdetail {
+    width: 100%;
+  }
+
+  #introduction {
+    max-width: 850px;
+  }
+
+  .introcontainer {
+    flex-direction: column;
   }
 }
