@@ -110,7 +110,7 @@ header {
 
 .black-bg {
   position: fixed;
-  background: #fb7878;
+  background: #fb7878eb;
   top: 50%;
   left: 50%;
   width: 80%;
@@ -123,8 +123,8 @@ header {
 }
 
 .black-bg.open {
-  opacity: 0.92;
   visibility: visible;
+  opacity: 1;
   height: 90%;
 }
 
@@ -166,6 +166,7 @@ header {
 
 .airplane {
   width: 50%;
+  position: relative;
 }
 
 .fvshape {
@@ -175,6 +176,13 @@ header {
   z-index: -1;
   max-width: 500px;
   overflow: hidden;
+}
+.heart {
+  width: 54px;
+  height: 66px;
+  position: absolute;
+  left: 95%;
+  bottom: 90%;
 }
 
 h1 {
@@ -197,6 +205,10 @@ h1 {
 }
 
 /* ABOUT */
+.sp {
+  display: none;
+}
+
 #about {
   max-width: 720px;
   margin: 120px auto 0;
