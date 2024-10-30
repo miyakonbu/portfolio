@@ -84,4 +84,8 @@
   .introcontainer {
     flex-direction: column;
   }
+
+  footer {
+    max-width: 850px;
+  }
 }
