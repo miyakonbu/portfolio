@@ -85,6 +85,17 @@
     flex-direction: column;
   }
 
+  .introimg {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .introtext {
+    width: 100%;
+    margin: 20px 0;
+    padding: 55px 5%;
+  }
+
   footer {
     max-width: 850px;
   }

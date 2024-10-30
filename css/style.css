@@ -399,6 +399,7 @@ h1 {
   width: 50%;
   background-color: #ffffff;
   padding: 55px 80px;
+  box-sizing: border-box;
 }
 
 .text-with-backgroundgreen {
