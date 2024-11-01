@@ -15,6 +15,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
                     <li><a href="./about.html">ABOUT</a></li>
                     <li><a href="#works">WORKS</a></li>
                     <li><a href="./about.html#contact">CONTACT</a></li>
-                    <li><a href="https://x.com/cotton_addesign"><img src="./images/logo-black.png" alt="X"></a>
+                    <li><a href="https://x.com/cotton_addesign"><img src="./images/logo.svg" alt="X"></a>
                     </li>
                 </ul>
             </nav>
@@ -57,8 +58,7 @@
                 <img src="./images/letter.svg" alt="手紙が紙飛行機に">
                 <img src="./images/heart.svg" class="heart">
             </div>
-            <div class="fvshape"><img src="images/shape01.png"></div>
-            <!-- <div class="fvshape"><img src="./images/shape01.svg"></div> -->
+            <div class="fvshape"><img src="images/shape01.svg"></div>
         </div>
     </header>
     <section id="about">
@@ -173,11 +173,18 @@
         </nav>
         <p class="copyright">©2024 Kiyomi Seino.</p>
     </footer>
+
     <script>
         $('#hamb').click(function () {
             $(this).toggleClass('active');
             $('#black-bg').toggleClass('open');
         });
+
+        // メニューのリンクをクリックしたときにメニューを閉じる
+        $('#black-bg a').click(function () {
+            $('#black-bg').hide();
+        });
+
     </script>
 </body>
 
