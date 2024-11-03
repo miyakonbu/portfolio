@@ -143,14 +143,16 @@
   }
 
   /* ABOUT MEのページ */
-
   #about_me {
     max-width: 850px;
+    margin-bottom: 0px;
+    padding: 0 15px 0 15px;
   }
 
   .about_me_container {
     max-width: 850px;
     flex-direction: column;
+    margin-bottom: 30px;
   }
 
   .lopages_title {
@@ -163,35 +165,105 @@
     left: -58px;
   }
 
-  /* コンテンツ表示順入れ替え */
+  .desiner {
+    width: 100%;
+  }
+
+  .name {
+    letter-spacing: 0.05em;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+
+  /* 自己紹介表示順入れ替え */
   .about_me_img {
     display: contents;
   }
   .about_me_text {
+    width: 100%;
     display: contents;
   }
   .abtimg_01 {
+    width: 100%;
+    margin-right: 0;
     order: 1;
   }
   #about_me h2 {
+    margin: 38px auto;
     order: 2;
   }
   .about_meshape {
     order: 3;
   }
   .about_me_01 {
+    padding: 0 15px 0 15px;
     order: 4;
   }
   .abtimg_02 {
+    width: 100%;
+    margin-right: 0;
     order: 5;
   }
   .about_me_02 {
+    padding: 0 15px 0 15px;
+    margin-top: 38px;
     order: 6;
-  }
-  #skills {
-    max-width: 850px;
   }
   /* 入れ替えここまで */
 
-  /* コンタクトフォーム */
+  /* スキル */
+  #skills {
+    max-width: 850px;
+    padding: 0 15px 0 15px;
+  }
+
+  .skillscontainer {
+    flex-direction: column;
+  }
+
+  .name02 {
+    font-size: 22px;
+    letter-spacing: 0.1em;
+    margin: 0 auto 40px;
+  }
+
+  /* スキル表示順入れ替え */
+  .skillsdetail {
+    display: contents;
+  }
+  .skillsimg {
+    display: contents;
+  }
+  .skillsimg img {
+    display: none;
+  }
+
+  .skillsdetail dl {
+    padding: 0 15px 0 15px;
+  }
+
+  /* コンタクト */
+  #contact {
+    max-width: 850px;
+    padding: 0 15px 0 15px;
+  }
+
+  .contact_text {
+    margin: 60px auto;
+    width: 80%;
+  }
+
+  .c-form__item {
+    flex-direction: column;
+    align-items: center;
+    max-width: 850px;
+  }
+
+  .c-form__label {
+    width: 90%;
+  }
+
+  .c-form__input {
+    width: 90%;
+  }
 }
