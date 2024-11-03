@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/others.css">
+    <link rel="stylesheet" href="./css/sp.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 </head>
 
 <body>
@@ -25,32 +28,52 @@
                 <li><a href="#contact">CONTACT</a></li>
                 <li><a href="https://x.com/cotton_addesign"><img src="images/logo-black.png" alt="X"></a>
                 </li>
+                <li class="hmb_container"></li>
             </ul>
         </nav>
+        <div class="hamb animation" id="hamb">
+            <span class="line animation"></span>
+            <span class="line animation"></span>
+            <span class="line animation"></span>
+        </div>
+        <div class="black-bg" id="black-bg">
+            <nav class="overlay">
+                <ul>
+                    <li><a href="https://miyakonbu.github.io/portfolio/">HOME</a></li>
+                    <li><a href="./about.html">ABOUT</a></li>
+                    <li><a href="#works">WORKS</a></li>
+                    <li><a href="./about.html#contact">CONTACT</a></li>
+                    <li><a href="https://x.com/cotton_addesign"><img src="./images/logo.svg" alt="X"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <section id="about_me">
         <h1 class="lopages_title">自己紹介と<br>
             スキルについて</h1>
         <div class="about_me_container">
             <div class="about_me_img">
-                <img src="images/aboutmeimg01.jpg">
-                <img src="images/aboutmeimg02.jpg">
+                <img src="images/aboutmeimg01.jpg" class="abtimg_01">
+                <img src="images/aboutmeimg02.jpg" class="abtimg_02">
             </div>
             <div class="about_me_text">
                 <h2><span class="desiner">Web designer</span><span class="name">Kiyomi Seino</span></h2>
                 <div class="about_meshape"><img src="images/_shape02_.png"></div>
-
-                <p>サイトにお越しくださりありがとうございます。<br>
-                    TOPページ下部にも記載したとおり、WEBの仕事が大好きな人です。</p>
-                <p>とあるきっかけでWEB制作を学び、販路がECサイトのみの化粧品会社に入社。入社後間もなく「メルマガ登録促進」のためのLP制作を任せていただいた時の体験がずっと忘れられません。<br>
-                    私が入社前は専門職ではない社長自らLPを制作していて、大変失礼ながら、私でもかなり改善の余地がある！と思いました。</p>
-                <p>社長には制作したものを大変喜んでいただき、先輩社員と社長が私のデスクを囲んで「あとココだけ修正して！」等々3人で意見を出し合って完成させた、初めてのLP。リリース後の結果はそれまでの数倍の登録者数を記録出来ました。実務未経験だった私にはとてもありがたいデビュー戦に。
-                </p>
-                <p>思いが届いた！と数字で分かるのがまた嬉しい。その数字の数だけ、お客様とのご縁が生まれたと思うと気持ちが高まりました。
-                    あの時の気持ちのまま、初めましてのお客様の心に響くものを制作していきます！
-                </p>
+                <div class="about_me_01">
+                    <p>サイトにお越しくださりありがとうございます。<br>
+                        TOPページ下部にも記載したとおり、WEBの仕事が大好きな人です。</p>
+                    <p>とあるきっかけでWEB制作を学び、販路がECサイトのみの化粧品会社に入社。入社後間もなく「メルマガ登録促進」のためのLP制作を任せていただいた時の体験がずっと忘れられません。<br>
+                        私が入社前は専門職ではない社長自らLPを制作していて、大変失礼ながら、私でもかなり改善の余地がある！と思いました。</p>
+                    <p>社長には制作したものを大変喜んでいただき、先輩社員と社長が私のデスクを囲んで「あとココだけ修正して！」等々3人で意見を出し合って完成させた、初めてのLP。リリース後の結果はそれまでの数倍の登録者数を記録出来ました。実務未経験だった私にはとてもありがたいデビュー戦に。
+                    </p>
+                </div>
+                <div class="about_me_02">
+                    <p>思いが届いた！と数字で分かるのがまた嬉しい。その数字の数だけ、お客様とのご縁が生まれたと思うと気持ちが高まりました。
+                        あの時の気持ちのまま、初めましてのお客様の心に響くものを制作していきます！
+                    </p>
+                </div>
             </div>
-        </div>
     </section>
 
     <section id="skills">
@@ -140,6 +163,18 @@
         </nav>
         <p class="copyright">©2024 Kiyomi Seino.</p>
     </footer>
+    <script>
+        $('#hamb').click(function () {
+            $(this).toggleClass('active');
+            $('#black-bg').toggleClass('open');
+        });
+
+        // メニューのリンクをクリックしたときにメニューを閉じる
+        $('#black-bg a').click(function () {
+            $('#black-bg').hide();
+        });
+
+    </script>
 
 </body>
 

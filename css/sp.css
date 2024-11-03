@@ -3,6 +3,7 @@
 /* スマホ版 */
 
 @media screen and (max-width: 850px) {
+  /* TOPページ */
   .pc_nav {
     display: none;
   }
@@ -37,7 +38,7 @@
   #about {
     max-width: 850px;
     margin: 200px auto 0;
-    padding: 0 10px 0 10px;
+    padding: 0 15px 0 15px;
   }
 
   .message {
@@ -70,7 +71,7 @@
 
   #works {
     max-width: 850px;
-    padding: 0 10px 0 10px;
+    padding: 0 15px 0 15px;
   }
 
   .workscontainer {
@@ -83,6 +84,7 @@
 
   #introduction {
     max-width: 850px;
+    padding: 80px 4%;
   }
 
   .introcontainer {
@@ -91,7 +93,14 @@
 
   .introimg {
     width: 100%;
+    height: auto;
+    text-align: center;
     margin-right: 0;
+  }
+
+  .introimg > img {
+    min-width: 200px;
+    object-fit: scale-down;
   }
 
   .introtext {
@@ -100,7 +109,89 @@
     padding: 55px 5%;
   }
 
+  .text-with-backgroundgreen {
+    font-size: 16px;
+  }
+
+  .intromessage {
+    font-size: 18px;
+  }
+
+  .intromessage01 {
+    line-height: 2.2;
+  }
+
+  .introcontainer02 > p {
+    display: none;
+  }
+
+  .introcontainer02 {
+    display: flex;
+    justify-content: end;
+  }
+
   footer {
     max-width: 850px;
+    position: relative;
+    margin: 150px auto 0;
+    padding: 0 15px 0 10px;
   }
+
+  .pc_nav_footer ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* ABOUT MEのページ */
+
+  #about_me {
+    max-width: 850px;
+  }
+
+  .about_me_container {
+    max-width: 850px;
+    flex-direction: column;
+  }
+
+  .lopages_title {
+    font-size: 28px;
+  }
+
+  #about_me h1:before {
+    font-size: 58px;
+    top: -15px;
+    left: -58px;
+  }
+
+  /* コンテンツ表示順入れ替え */
+  .about_me_img {
+    display: contents;
+  }
+  .about_me_text {
+    display: contents;
+  }
+  .abtimg_01 {
+    order: 1;
+  }
+  #about_me h2 {
+    order: 2;
+  }
+  .about_meshape {
+    order: 3;
+  }
+  .about_me_01 {
+    order: 4;
+  }
+  .abtimg_02 {
+    order: 5;
+  }
+  .about_me_02 {
+    order: 6;
+  }
+  #skills {
+    max-width: 850px;
+  }
+  /* 入れ替えここまで */
+
+  /* コンタクトフォーム */
 }
