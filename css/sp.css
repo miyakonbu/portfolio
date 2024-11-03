@@ -51,6 +51,7 @@
 
   .message01 {
     display: none;
+    margin-bottom: 40px;
   }
 
   .message01_sp {
@@ -58,7 +59,7 @@
     display: block;
     line-height: 2.75;
     letter-spacing: 0.2em;
-    margin-top: 40px;
+    margin: 40px 0;
   }
 
   span {

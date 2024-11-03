@@ -7,9 +7,11 @@ body {
   font-feature-settings: "palt";
   margin: 0;
   overflow-x: hidden;
-  overflow: scroll;
 }
 
+.wrapper {
+  overflow-x: hidden;
+}
 /* ヘッダー */
 header {
   /* max-width: 1000px; */
@@ -245,11 +247,10 @@ h1 {
 
 .message01 {
   font-size: 16px;
-  /* font-weight: 300; */
   display: block;
   line-height: 2.75;
   letter-spacing: 0.2em;
-  margin-top: 40px;
+  margin: 40px 0;
 }
 
 .message01_sp {
@@ -308,6 +309,7 @@ h1 {
   max-width: 1000px;
   margin: 120px auto 0;
   position: relative;
+  /* overflow-x: clip; */
 }
 
 #works h2 {
@@ -321,7 +323,7 @@ h1 {
   top: -20px; /* 上からの位置指定 */
   z-index: -1;
   max-width: 600px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .workscontainer {
