@@ -250,7 +250,8 @@
 
   .contact_text {
     margin: 60px auto;
-    width: 80%;
+    display: block;
+    width: fit-content;
   }
 
   .c-form__item {
