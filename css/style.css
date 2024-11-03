@@ -164,6 +164,10 @@ header {
   position: relative;
 }
 
+.letterplane {
+  width: 95%;
+}
+
 .fvshape {
   position: absolute;
   left: -320px; /* 左右からの位置指定 */
@@ -172,12 +176,13 @@ header {
   max-width: 500px;
   overflow: hidden;
 }
+
 .heart {
-  width: 54px;
-  height: 66px;
+  width: 48px;
+  height: 58px;
   position: absolute;
-  left: 95%;
-  bottom: 90%;
+  left: 94%;
+  bottom: 100%;
 }
 
 h1 {
