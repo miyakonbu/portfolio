@@ -132,11 +132,6 @@ header {
   background-color: #fff;
 }
 
-/*アニメーション*/
-/* .black-bg {
-  transition: opacity 0.35s, visibility 0.35s, width 0.35s;
-} */
-
 .black-bg {
   transition: opacity 0.35s, width 0.35s;
 }
