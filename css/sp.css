@@ -105,6 +105,7 @@
 
   .introimg > img {
     min-width: 200px;
+    height: auto;
     /* object-fit: scale-down; */
     object-fit: contain;
   }
