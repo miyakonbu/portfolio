@@ -262,14 +262,6 @@ textarea.c-form__input {
   margin: 0 auto;
 }
 
-.page-logo-text {
-  font-size: 20px;
-  font-weight: 300;
-  letter-spacing: 0.001em;
-  position: absolute;
-  top: 10px;
-}
-
 .page-logo {
   font-family: "Josefin Sans", sans-serif;
   font-size: 100px;
@@ -281,6 +273,14 @@ textarea.c-form__input {
   left: -24px;
   z-index: -1;
   overflow: hidden;
+}
+
+.page-logo-text {
+  font-size: 20px;
+  font-weight: 300;
+  letter-spacing: 0.001em;
+  position: absolute;
+  top: 10px;
 }
 
 .lopages_title_works {

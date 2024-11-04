@@ -272,4 +272,53 @@
   .c-form__input {
     width: 90%;
   }
+
+  /* WORKS 美容室LIFE */
+  #works_life,
+  #works_bn001 {
+    max-width: 850px;
+    padding: 0 15px 0 15px;
+  }
+
+  .page-logo {
+    font-size: 58px;
+    top: -24px;
+    left: -12px;
+  }
+
+  .page-logo-text {
+    font-size: 14px;
+    top: 10px;
+  }
+
+  .lopages_title_works {
+    font-size: 26px;
+    margin-left: 0;
+  }
+
+  .page-logo-text02 {
+    margin-left: 0;
+  }
+
+  .works_detail_intro img {
+    width: 180%;
+    left: -115px;
+  }
+
+  .objective {
+    flex-direction: column;
+  }
+
+  .objective dt {
+    width: 96%;
+    max-width: 850px;
+    margin-left: 10px;
+    margin-bottom: 12px;
+  }
+
+  .objective dd {
+    width: 96%;
+    max-width: 850px;
+    margin: 0 10px;
+  }
 }
