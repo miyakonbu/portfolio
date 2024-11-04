@@ -321,4 +321,11 @@
     max-width: 850px;
     margin: 0 10px;
   }
+
+  /* works 激旨バーガーバナー */
+
+  .bn_img {
+    max-width: 100%;
+    object-fit: contain;
+  }
 }
