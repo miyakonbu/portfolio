@@ -105,7 +105,8 @@
 
   .introimg > img {
     min-width: 200px;
-    object-fit: scale-down;
+    /* object-fit: scale-down; */
+    object-fit: contain;
   }
 
   .introtext {
