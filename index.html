@@ -175,20 +175,18 @@
             </nav>
             <p class="copyright">©2024 Kiyomi Seino.</p>
         </footer>
-
-        <script>
-            $('#hamb').click(function () {
-                $(this).toggleClass('active');
-                $('#black-bg').toggleClass('open');
-            });
-
-            // メニューのリンクをクリックしたときにメニューを閉じる
-            $('#black-bg a').click(function () {
-                $('#black-bg').hide();
-            });
-
-        </script>
     </div>
+    <script>
+        $('#hamb').click(function () {
+            $(this).toggleClass('active');
+            $('#black-bg').toggleClass('open');
+        });
+
+        // メニューのリンクをクリックしたときにメニューを閉じる
+        $('#black-bg a').click(function () {
+            $('#black-bg').hide();
+        });
+    </script>
 </body>
 
 </html>
