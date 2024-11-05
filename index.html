@@ -182,9 +182,10 @@
             $('#black-bg').toggleClass('open');
         });
 
-        // メニューのリンクをクリックしたときにメニューを閉じる
+        // メニューのリンクをクリックでactiveとOPENクラスをremove
         $('#black-bg a').click(function () {
-            $('#black-bg').hide();
+            $('#hamb').removeClass('active');
+            $('#black-bg').removeClass('open');
         });
     </script>
 </body>
