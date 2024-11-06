@@ -167,8 +167,9 @@ header {
   position: relative;
 }
 
-.letterplane {
+svg#mask {
   width: 95%;
+  height: fit-content;
 }
 
 .fvshape {
