@@ -509,3 +509,14 @@ footer {
   transform-origin: right top; /* 必要に応じて原点を調整 */
   /* margin-left: 100px; */
 }
+
+#mask .st0 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 35; /*線の太さを指定する*/
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1500; /* 線の間隔を指定する */
+  stroke-dashoffset: 1500; /* 線の位置を指定する */
+}
