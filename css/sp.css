@@ -15,10 +15,16 @@
 
   .airplane {
     width: 100%;
+    margin-top: 80px;
+    margin-left: 0;
   }
 
   .heart {
-    width: 36px;
+    width: 24px;
+    left: 92%;
+    display: inline-block; /* 回転させるために必要 */
+    transform-origin: center;
+    transform: rotate(-15deg);
   }
 
   .scroll {
