@@ -159,12 +159,14 @@ header {
   display: flex;
   justify-content: center;
   margin: 180px auto 0;
-  max-width: 1000px;
+  max-width: 1100px;
 }
 
 .airplane {
-  width: 50%;
+  width: 45%;
   position: relative;
+  margin-left: 20px;
+  box-sizing: border-box;
 }
 
 svg#mask {
@@ -174,24 +176,24 @@ svg#mask {
 
 .fvshape {
   position: absolute;
-  left: -320px; /* 左右からの位置指定 */
-  top: 60px; /* 上からの位置指定 */
+  left: -150px; /* 左右からの位置指定 */
+  top: 20px; /* 上からの位置指定 */
   z-index: -1;
   max-width: 500px;
   overflow: hidden;
 }
 
 .heart {
-  width: 48px;
-  height: 58px;
+  width: 38px;
+  height: 47px;
   position: absolute;
-  left: 94%;
-  bottom: 100%;
+  left: 96%;
+  bottom: 105%;
 }
 
 h1 {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 52px;
+  font-size: 50px;
   font-weight: 600;
   font-style: normal;
   letter-spacing: 0.075em;
@@ -498,9 +500,9 @@ footer {
 
 /* 左右に表示させるscrollの文字 */
 .scroll {
-  position: fixed;
+  /* position: fixed; */
   cursor: pointer;
-  left: 2%;
+  left: 5%;
   top: 600px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 24px;
@@ -514,7 +516,7 @@ footer {
 #mask .st0 {
   fill: none;
   stroke: #fff;
-  stroke-width: 35; /*線の太さを指定する*/
+  stroke-width: 70; /*線の太さを指定する*/
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;

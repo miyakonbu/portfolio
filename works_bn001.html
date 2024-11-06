@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/others.css">
     <link rel="stylesheet" href="./css/sp.css">
+    <link rel="icon" href="./images/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
@@ -142,9 +143,10 @@
             $('#black-bg').toggleClass('open');
         });
 
-        // メニューのリンクをクリックしたときにメニューを閉じる
+        // メニューのリンクをクリックでactiveとOPENクラスをremove
         $('#black-bg a').click(function () {
-            $('#black-bg').hide();
+            $('#hamb').removeClass('active');
+            $('#black-bg').removeClass('open');
         });
 
     </script>
