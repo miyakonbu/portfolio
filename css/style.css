@@ -163,13 +163,17 @@ header {
   max-width: 1100px;
 }
 
+.catchphrase {
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
 .airplane {
-  width: 45%;
+  width: 50%;
   position: relative;
   margin-left: 20px;
   box-sizing: border-box;
 }
-
 svg#mask {
   width: 95%;
   height: fit-content;
@@ -557,12 +561,12 @@ footer {
   color: #666;
   text-transform: uppercase;
   font-size: 14px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 300;
   display: block;
 }
 
 /*スクロールリンクの形状*/
-
 .js-scroll a::after {
   content: "";
   position: absolute;
@@ -617,4 +621,62 @@ _:-ms-lang(x),
 _:-ms-lang(x),
 .js-pagetop a::before {
   right: 0;
+}
+
+/*========= 流れるテキスト ===============*/
+
+/*全共通*/
+
+.slide-in {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.slide-in_inner {
+  display: inline-block;
+}
+
+/* 上下のアニメーション*/
+.upAnime {
+  opacity: 0; /* 事前に透過0 にして消しておく*/
+}
+
+.slideAnimeDownUp {
+  animation-name: slideTextY100;
+  animation-duration: 1.4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes slideTextY100 {
+  from {
+    transform: translateY(100%); /* 要素を上の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* 要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+.slideAnimeUpDown {
+  animation-name: slideTextY-100;
+  animation-duration: 0.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes slideTextY-100 {
+  from {
+    transform: translateY(-100%); /* 要素を下の枠外に移動*/
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0); /* 要素を元の位置に移動*/
+    opacity: 1;
+  }
+}
+
+/*== ランダム表示テキスト ==*/
+.randomAnime {
+  visibility: hidden;
 }

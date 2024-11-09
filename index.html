@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
@@ -53,9 +54,8 @@
             </div>
             <div class="fv">
                 <div class="catchphrase">
-                    <h1>Kiyomi Seino<br>
-                        Portfolio Website.</h1>
-                    <h2 class="w_letter">Designing is like writing a letter.</h2>
+                    <h1>Kiyomi Seino<br>Portfolio Website.</h1>
+                    <h2 class="w_letter randomAnime">Designing is like writing a letter.</h2>
                 </div>
                 <div class="airplane">
                     <svg id="mask" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +89,7 @@
         </header>
         <section id="about">
             <h2><span class="subtitle01">私について</span>
-                <span class="subtitle">ABOUT</span>
+                <span class="subtitle slide-in upAnime"><span class="slide-in_inner upAnimeInner">ABOUT</span></span>
             </h2>
             <p class="message"><span>コトバとデザインで</span><br class="pc">
                 <span>“知られてない”を</span><br class="sp"><span>乗り越える<br class="pc">お手伝いを</span>
@@ -264,9 +264,79 @@
         });
         // ↑↑右側scroll/pageTOPここまで
 
+        // ↓↓テキスト上から流れてくる
+        function slideAnime() {
+            //====上に動くアニメーションここから===
+            $('.upAnime').each(function () {
+                var elemPos = $(this).offset().top - 50;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll >= elemPos - windowHeight) {
+                    // 上から下へ表示するクラスを付与
+                    // テキスト要素を挟む親要素（上）とテキスト要素を元位置でアニメーションをおこなう
+                    $(this).addClass("slideAnimeUpDown");
+                    // 要素を上枠外に移動しCSS アニメーションで上から元の位置に移動
+                    $(this).children(".upAnimeInner").addClass("slideAnimeDownUp");
+                    // 子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
+                } else {
+                    // 上から下へ表示するクラスを取り除く
+                    $(this).removeClass("slideAnimeUpDown");
+                    $(this).children(".upAnimeInner").removeClass("slideAnimeDownUp");
+                }
+            });
+        }
+        // 画面が読み込まれたらすぐに動かしたい場合の記述
+        $(window).on('load', function () {
+            slideAnime();/* アニメーション用の関数を呼ぶ*/
+        });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+        // ↑↑ テキスト上から流れてくるここまで
+
+        // ↓↓テキストランダムに表示
+        var Obj = {
+            loop: false,
+            minDisplayTime: 2000,// アニメーションの間隔時間
+            initialDelay: 500, // アニメーション開始までの遅延時間
+            autoStart: true,
+            in: {
+                effect: 'fadeInUp',//animate.css の中にある採用したい動きのクラス名
+                delayScale: 0.5,// 遅延時間の指数
+                delay: 100,// 文字ごとの遅延時間
+                sync: false,// アニメーションをすべての文字に同時適用するかどうか
+                shuffle: true,// 文字表示がランダムな順に表示されるかどうか
+            },
+            out: {// 終了時のアニメーション設定をしたい場合はここに追記
+            }
+        }
+        var element
+        //初期設定
+        function RandomInit() {
+            element = $(".randomAnime");
+            $(element[0]).textillate(Obj);
+        }
+
+        function RandomAnimeControl() {
+            var elemPos = $(element[1]).offset().top - 50;
+            var scroll = $(window).scrollTop();
+            var windowHeight = $(window).height();
+
+            if (scroll >= elemPos - windowHeight) {
+                $(element[1]).textillate(Obj);
+            }
+        }
+
+        // 画面が読み込まれたらすぐに動かしたい場合の記述
+        $(window).on('load', function () {
+            RandomInit(); /*初期設定を読み込み*/
+            RandomAnimeControl();/*アニメーション用の関数を呼ぶ*/
+        });//ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+
+        // ↑↑テキストランダムに表示
+
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.min.js"></script>
+    <script src="./js/lettering.js"></script>
 </body>
 
 </html>
