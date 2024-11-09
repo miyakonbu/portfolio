@@ -82,20 +82,18 @@
                             <!-- ココまでイラレ書き出しデータ -->
                         </mask>
                     </svg>
-                    <!-- <img src="./images/letter.svg" alt="手紙が紙飛行機に" class="letterplane"> -->
                     <img src="./images/heart.svg" class="heart">
                 </div>
                 <div class="fvshape"><img src="./images/shape-03b.svg"></div>
             </div>
-            <div class="scroll"><span>scroll</span></div>
         </header>
         <section id="about">
             <h2><span class="subtitle01">私について</span>
                 <span class="subtitle">ABOUT</span>
             </h2>
-            <P class="message"><span>コトバとデザインで</span><br class="pc">
+            <p class="message"><span>コトバとデザインで</span><br class="pc">
                 <span>“知られてない”を</span><br class="sp"><span>乗り越える<br class="pc">お手伝いを</span>
-            </P>
+            </p>
             <p class="message01">自信を持ってオススメできる素敵な商品なのに<br>
                 美味しい食事ができるお店なのに<br>
                 多くの方の役に立つサービスなのに…あまり「知られてない」<br>
@@ -187,6 +185,8 @@
         </section>
 
         <footer>
+            <p class="js-scroll scroll-top scrollview"><a href="#introduction">Scroll</a></p>
+            <p class="js-pagetop scroll-top"><a href="#">Page Top</a></p>
             <p class="footertitle">Kiyomi Seino<br>
                 Portfolio Website. </p>
             <nav class="pc_nav_footer">
@@ -203,24 +203,25 @@
         </footer>
     </div>
     <script>
-        // ハンバーガーメニュー開閉
+        // ↓↓ハンバーガーメニュー開閉
         $('#hamb').click(function () {
             $(this).toggleClass('active');
             $('#black-bg').toggleClass('open');
         });
 
-        // メニューのリンクをクリックでactiveとOPENクラスをremove
+        // リンクをクリックでactiveとOPENクラスをremove
         $('#black-bg a').click(function () {
             $('#hamb').removeClass('active');
             $('#black-bg').removeClass('open');
         });
+        // ↑↑ハンバーガー開閉ここまで
 
         // FVの線画アニメ↓↓
         var stroke;
         stroke = new Vivus('mask', {//アニメーションをするIDの指定
             start: 'manual',//自動再生をせずスタートをマニュアルに
             type: 'scenario-sync',// アニメーションのタイプを設定
-            duration: 50,//アニメーションの時間設定。数字が小さくなるほど速い
+            duration: 50,//アニメーションの時間設定。数字小さくなるほど速い
             forceRender: false,//パスが更新された場合に再レンダリングさせない
             animTimingFunction: Vivus.EASE,//動きの加速減速設定
         });
@@ -229,8 +230,42 @@
             stroke.play();//SVGアニメーションの実行
         });
         // ↑↑線画アニメここまで
-    </script>
 
+        // ↓↓右側のscroll/pageTOP表記
+
+        //スクロールした際の動きを関数でまとめる
+        function PageTopCheck() {
+            var winScrollTop = $(this).scrollTop();
+            var secondTop = $("#introduction").offset().top - 150; //#area-2の上から150pxの位置まで来たら
+            if (winScrollTop >= secondTop) {
+                $('.js-scroll').removeClass('scroll-view');//.js-scrollからscroll-viewというクラス名を除去
+                $('.js-pagetop').addClass('scroll-view');//.js-pagetopにscroll-viewというクラス名を付与
+            } else {//元に戻ったら
+                $('.js-scroll').addClass('scroll-view');//.js-scrollからscroll-viewというクラス名を付与
+                $('.js-pagetop').removeClass('scroll-view');//.js-pagetopからscroll-viewというクラス名を除去
+            }
+        }
+        //クリックした際の動き
+        $('.scroll-top a').click(function () {
+            var elmHash = $(this).attr('href'); //hrefの内容を取得
+            if (elmHash == "#introduction") {//もし、リンク先のhref の後が#area-2の場合
+                var pos = $(elmHash).offset().top;
+                $('body,html').animate({ scrollTop: pos }, pos); //#area-2にスクロール
+            } else {
+                $('body,html').animate({ scrollTop: 0 }, 50); //それ以外はトップへスクロール。数字が大きくなるほどゆっくり
+            }
+            return false;//リンク自体の無効化
+        });
+
+        // 画面をスクロールをしたら動かす
+        $(window).scroll(function () {
+            PageTopCheck();/* スクロールした際の動きの関数を呼ぶ*/
+        });
+        // ↑↑右側scroll/pageTOPここまで
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 </body>
 
 </html>

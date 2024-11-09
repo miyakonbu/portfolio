@@ -12,6 +12,7 @@ body {
 .wrapper {
   overflow-x: hidden;
 }
+
 /* ヘッダー */
 header {
   /* max-width: 1000px; */
@@ -498,73 +499,6 @@ footer {
   text-align: right;
 }
 
-/* 左右に表示させるscrollの文字 */
-.scroll {
-  /*描画位置※位置は適宜調整*/
-  position: absolute;
-  bottom: 1%;
-  right: 95%;
-  top: 600px;
-  /*矢印の動き1秒かけて永遠にループ*/
-  animation: arrowmove 1s ease-in-out infinite;
-  cursor: pointer;
-}
-
-/*下からの距離が変化して全体が下→上→下に動く*/
-@keyframes arrowmove {
-  0% {
-    bottom: 1%;
-  }
-  50% {
-    bottom: 3%;
-  }
-  100% {
-    bottom: 1%;
-  }
-}
-
-/*Scrollテキストの描写*/
-.scroll span {
-  /*描画位置*/
-  position: absolute;
-  left: -20px;
-  bottom: 10px;
-  /*テキストの形状*/
-  color: #333333;
-  font-size: 0.7rem;
-  letter-spacing: 0.05em;
-  /*縦書き設定*/
-  -ms-writing-mode: tb-rl;
-  -webkit-writing-mode: vertical-rl;
-  writing-mode: vertical-rl;
-}
-
-/* 矢印の描写 */
-.scroll:before {
-  content: "";
-  /*描画位置*/
-  position: absolute;
-  bottom: 0;
-  right: -6px;
-  /*矢印の形状*/
-  width: 1px;
-  height: 20px;
-  background: #333333;
-  transform: skewX(-31deg);
-}
-
-.scroll:after {
-  content: "";
-  /*描画位置*/
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  /*矢印の形状*/
-  width: 1px;
-  height: 50px;
-  background: #333333;
-}
-
 /* ==FVの線画アニメ== */
 #mask .st0 {
   fill: none;
@@ -575,4 +509,112 @@ footer {
   stroke-miterlimit: 10;
   stroke-dasharray: 1500; /* 線の間隔を指定する */
   stroke-dashoffset: 1500; /* 線の位置を指定する */
+}
+
+/* ==右側のスクロール表示== */
+/*スクロールリンクの形状*/
+.scroll-top {
+  /*表示位置*/
+  position: fixed;
+  right: 3%;
+  bottom: 10px;
+  z-index: 2;
+  /*はじめは非表示*/
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s; /*それぞれに0.5秒の変化のアニメーション*/
+  /*縦書き*/
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  /*改行禁止*/
+  white-space: nowrap;
+  /*矢印の動き*/
+  animation: arrowmove 2s ease-in-out infinite;
+}
+
+@keyframes arrowmove {
+  0% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 25px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+
+/*.scroll-viewクラスがついたら出現*/
+.scroll-top.scroll-view {
+  opacity: 1;
+  visibility: visible;
+}
+
+/*リンク全体の aタグの形状*/
+.scroll-top a {
+  text-decoration: none;
+  color: #666;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+}
+
+/*スクロールリンクの形状*/
+
+.js-scroll a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 50px;
+  background: #666;
+}
+
+.js-scroll a::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: -6px;
+  width: 1px;
+  height: 20px;
+  background: #666;
+  transform: skewX(-31deg);
+}
+
+/*Edge IE11 hack*/
+_:-ms-lang(x),
+.js-scroll a::before {
+  right: -11px;
+}
+
+/*ページトップリンクの形状*/
+
+.js-pagetop a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 50px;
+  background: #666;
+}
+
+.js-pagetop a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -6px;
+  width: 1px;
+  height: 20px;
+  background: #666;
+  transform: skewX(31deg);
+}
+
+/*Edge IE11 hack*/
+_:-ms-lang(x),
+.js-pagetop a::before {
+  right: 0;
 }
