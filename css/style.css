@@ -179,7 +179,7 @@ svg#mask {
   left: -150px; /* 左右からの位置指定 */
   top: 20px; /* 上からの位置指定 */
   z-index: -1;
-  max-width: 500px;
+  width: 560px;
   overflow: hidden;
 }
 
