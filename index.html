@@ -85,9 +85,9 @@
                     <!-- <img src="./images/letter.svg" alt="手紙が紙飛行機に" class="letterplane"> -->
                     <img src="./images/heart.svg" class="heart">
                 </div>
-                <div class="fvshape"><img src="./images/shape-03.svg"></div>
+                <div class="fvshape"><img src="./images/shape-03b.svg"></div>
             </div>
-            <p class="scroll">scroll</p>
+            <div class="scroll"><span>scroll</span></div>
         </header>
         <section id="about">
             <h2><span class="subtitle01">私について</span>
@@ -203,6 +203,7 @@
         </footer>
     </div>
     <script>
+        // ハンバーガーメニュー開閉
         $('#hamb').click(function () {
             $(this).toggleClass('active');
             $('#black-bg').toggleClass('open');
@@ -214,6 +215,7 @@
             $('#black-bg').removeClass('open');
         });
 
+        // FVの線画アニメ↓↓
         var stroke;
         stroke = new Vivus('mask', {//アニメーションをするIDの指定
             start: 'manual',//自動再生をせずスタートをマニュアルに
@@ -221,12 +223,12 @@
             duration: 50,//アニメーションの時間設定。数字が小さくなるほど速い
             forceRender: false,//パスが更新された場合に再レンダリングさせない
             animTimingFunction: Vivus.EASE,//動きの加速減速設定
-        }
-        );
+        });
 
         $(window).on('load', function () {
             stroke.play();//SVGアニメーションの実行
         });
+        // ↑↑線画アニメここまで
     </script>
 
 </body>
