@@ -113,7 +113,7 @@ img {
   color: #666;
   text-transform: uppercase;
   font-size: 14px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 300;
   display: block;
 }
@@ -175,7 +175,7 @@ _:-ms-lang(x),
   right: 0;
 }
 
-/*========= 流れるテキスト ===============*/
+/*=== 流れるテキスト ===*/
 
 /*全共通*/
 
@@ -249,4 +249,15 @@ _:-ms-lang(x),
   display: block;
   line-height: 0; /*行の高さを0にする*/
   overflow: hidden; /*拡大してはみ出る要素を隠す*/
+}
+
+/* ==ページ読み込みでフワッと表示== */
+.load-fade {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+.load-fade.is-show {
+  opacity: 1;
+  visibility: visible;
 }

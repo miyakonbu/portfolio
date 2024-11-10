@@ -82,7 +82,7 @@
                             <!-- ココまでイラレ書き出しデータ -->
                         </mask>
                     </svg>
-                    <img src="./images/heart.svg" class="heart">
+                    <div class="load-fade"><img src="./images/heart.svg" class="heart"></div>
                 </div>
                 <div class="fvshape"><img src="./images/shape-03.svg"></div>
             </div>
@@ -332,6 +332,17 @@
 
         // ↑↑テキストランダムに表示
 
+        // ==↓↓画面ロードでフワッと表示 ==
+        function load_effect() {
+            var element = document.getElementsByClassName('load-fade');
+            if (!element) return; // 要素がない場合は終了
+
+            for (var i = 0; i < element.length; i++) {
+                element[i].classList.add('is-show');
+            }
+        }
+        setTimeout(load_effect, 5000); // ●ミリ秒秒経過後に実行
+        // ==↑↑フワッと表示ここまで ==
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
