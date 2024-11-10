@@ -179,13 +179,16 @@ svg#mask {
   height: fit-content;
 }
 
-.fvshape {
-  position: absolute;
-  left: -150px; /* 左右からの位置指定 */
-  top: 20px; /* 上からの位置指定 */
-  z-index: -1;
-  width: 560px;
-  overflow: hidden;
+/* ==FVの線画アニメ== */
+#mask .st0 {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 70; /*線の太さを指定する*/
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 1500; /* 線の間隔を指定する */
+  stroke-dashoffset: 1500; /* 線の位置を指定する */
 }
 
 .heart {
@@ -194,6 +197,41 @@ svg#mask {
   position: absolute;
   left: 96%;
   bottom: 105%;
+}
+
+/* ==↓↓ハートを揺らす== */
+.sway {
+  animation: floating-x 7.2s ease-in-out infinite alternate-reverse;
+}
+.target {
+  animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floating-x {
+  0% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+@keyframes floating-y {
+  0% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(10%);
+  }
+}
+/* ==↑↑ハート揺らすここまで== */
+
+.fvshape {
+  position: absolute;
+  left: -150px; /* 左右からの位置指定 */
+  top: 20px; /* 上からの位置指定 */
+  z-index: -1;
+  width: 560px;
+  overflow: hidden;
 }
 
 h1 {
@@ -501,16 +539,4 @@ footer {
   font-style: normal;
   letter-spacing: 0.05em;
   text-align: right;
-}
-
-/* ==FVの線画アニメ== */
-#mask .st0 {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 70; /*線の太さを指定する*/
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-miterlimit: 10;
-  stroke-dasharray: 1500; /* 線の間隔を指定する */
-  stroke-dashoffset: 1500; /* 線の位置を指定する */
 }
