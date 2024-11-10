@@ -84,7 +84,7 @@
                     </svg>
                     <img src="./images/heart.svg" class="heart">
                 </div>
-                <div class="fvshape"><img src="./images/shape-03b.svg"></div>
+                <div class="fvshape"><img src="./images/shape-03.svg"></div>
             </div>
         </header>
         <section id="about">
@@ -121,12 +121,14 @@
         </section>
         <section id="works">
             <h2><span class="subtitle01">制作物</span>
-                <span class="subtitle">WORKS</span>
+                <span class="subtitle slide-in upAnime"><span class="slide-in_innerupAnimeInner">WORKS</span></span>
             </h2>
             <div class="worksshape"><img src="./images/shape_02.svg"></div>
             <div class="workscontainer">
                 <dl class="worksdetail">
-                    <dt class="worksimg_mock"><a href=""><img src="./images/works01.jpg" alt="制作実績01"></a></dt>
+                    <dt class="worksimg_mock zoomOut"><a href=""><span class="mask"><img src="./images/works01.jpg"
+                                    alt="制作実績01"></span></a>
+                    </dt>
                     <dd class="works_description"><span class="text-with-backgroundpink">自主制作</span>Design|Coding<br>
                         ポートフォリオ※今ご覧のページです</dd>
                 </dl>
@@ -232,7 +234,6 @@
         // ↑↑線画アニメここまで
 
         // ↓↓右側のscroll/pageTOP表記
-
         //スクロールした際の動きを関数でまとめる
         function PageTopCheck() {
             var winScrollTop = $(this).scrollTop();
@@ -245,8 +246,7 @@
                 $('.js-pagetop').removeClass('scroll-view');//.js-pagetopからscroll-viewというクラス名を除去
             }
         }
-
-        //クリックした際の動き
+        //scrollクリックした際の動き
         $('.scroll-top a').click(function () {
             var elmHash = $(this).attr('href'); //hrefの内容を取得
             if (elmHash == "#introduction") {//もし、リンク先のhref の後が#area-2の場合
@@ -257,7 +257,6 @@
             }
             return false;//リンク自体の無効化
         });
-
         // 画面をスクロールをしたら動かす
         $(window).scroll(function () {
             PageTopCheck();/* スクロールした際の動きの関数を呼ぶ*/
@@ -285,10 +284,11 @@
                 }
             });
         }
-        // 画面が読み込まれたらすぐに動かしたい場合の記述
-        $(window).on('load', function () {
+        // 画面をスクロールをしたら動かしたい場合の記述
+        $(window).scroll(function () {
             slideAnime();/* アニメーション用の関数を呼ぶ*/
-        });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
+        });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
         // ↑↑ テキスト上から流れてくるここまで
 
         // ↓↓テキストランダムに表示
