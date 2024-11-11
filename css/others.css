@@ -40,10 +40,10 @@
 
 .about_meshape {
   position: absolute;
-  right: -250px; /* 左右からの位置指定 */
-  top: 20px; /* 上からの位置指定 */
+  right: -350px; /* 左右からの位置指定 */
+  top: -100px; /* 上からの位置指定 */
   z-index: -1;
-  max-width: 350px;
+  width: 700px;
   overflow: hidden;
 }
 
@@ -164,21 +164,21 @@
   width: 78%;
 }
 
+.contactshape02 {
+  position: absolute;
+  left: -500px; /* 左右からの位置指定 */
+  top: -60px; /* 上からの位置指定 */
+  z-index: -1;
+  width: 500px;
+  overflow: hidden;
+}
+
 .contactshape01 {
   position: absolute;
   right: -650px; /* 左右からの位置指定 */
   top: 600px; /* 上からの位置指定 */
   z-index: -1;
-  max-width: 600px;
-  overflow: hidden;
-}
-
-.contactshape02 {
-  position: absolute;
-  left: -400px; /* 左右からの位置指定 */
-  top: 10px; /* 上からの位置指定 */
-  z-index: -1;
-  max-width: 400px;
+  width: 800px;
   overflow: hidden;
 }
 

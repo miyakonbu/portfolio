@@ -227,10 +227,10 @@ svg#mask {
 
 .fvshape {
   position: absolute;
-  left: -150px; /* 左右からの位置指定 */
-  top: 20px; /* 上からの位置指定 */
+  left: -350px; /* 左右からの位置指定 */
+  top: -50px; /* 上からの位置指定 */
   z-index: -1;
-  width: 560px;
+  width: 700px;
   overflow: hidden;
 }
 
@@ -365,10 +365,10 @@ h1 {
 
 .worksshape {
   position: absolute;
-  right: -450px; /* 左右からの位置指定 */
-  top: -20px; /* 上からの位置指定 */
+  right: -500px; /* 左右からの位置指定 */
+  top: -100px; /* 上からの位置指定 */
   z-index: -1;
-  max-width: 600px;
+  width: 900px;
   overflow-x: hidden;
 }
 
