@@ -169,7 +169,7 @@
   left: -350px; /* 左右からの位置指定 */
   top: -60px; /* 上からの位置指定 */
   z-index: -1;
-  width: 500px;
+  width: 600px;
   overflow: hidden;
 }
 
