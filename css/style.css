@@ -303,6 +303,7 @@ h1 {
   display: none;
 }
 
+/* ==↓↓ViewMore== */
 .viewmore {
   justify-content: flex-end;
   display: flex;
@@ -312,14 +313,17 @@ h1 {
 .viewmoretext {
   font-family: "Josefin Sans", sans-serif;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   font-style: italic;
+  position: relative;
+  top: 2px;
 }
 
 .circle-arrow {
   width: 20px;
   height: 20px;
   background-color: #336666;
+  border: 1px solid #336666; /* 追加 */
   border-radius: 50%;
   position: relative;
 }
@@ -346,9 +350,22 @@ h1 {
   transform: rotate(45deg);
   transform-origin: calc(100% - 0.35px) 50%;
 }
-.arrow:hover .circle-arrow span {
-  background-color: #336666;
+
+/* ホバー時のスタイル */
+.arrow:hover .viewmore {
+  color: #336666; /* テキストの色変更 */
 }
+
+.arrow:hover .circle-arrow {
+  background-color: #ffffff; /* 背景色を白に変更 */
+  border-color: #336666; /* 線の色を緑に変更 */
+}
+
+.arrow:hover .circle-arrow span,
+.arrow:hover .circle-arrow span::after {
+  background-color: #336666; /* 矢印の色を緑に変更 */
+}
+/* ==↑↑ViewMoreここまで== */
 
 /* WORKS */
 #works {

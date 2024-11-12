@@ -166,7 +166,7 @@
 
 .contactshape02 {
   position: absolute;
-  left: -500px; /* 左右からの位置指定 */
+  left: -350px; /* 左右からの位置指定 */
   top: -60px; /* 上からの位置指定 */
   z-index: -1;
   width: 500px;
@@ -175,10 +175,10 @@
 
 .contactshape01 {
   position: absolute;
-  right: -650px; /* 左右からの位置指定 */
+  right: -550px; /* 左右からの位置指定 */
   top: 600px; /* 上からの位置指定 */
   z-index: -1;
-  width: 800px;
+  width: 700px;
   overflow: hidden;
 }
 
