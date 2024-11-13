@@ -67,6 +67,7 @@
             <div class="works_detail_container">
                 <img src="./images/life01.jpg" alt="美容室「LIFE」PC画面で見た時のイメージ">
                 <div class="works_detail_intro">
+                    <div><img class="fluid-shape" src="./images/shape-works.png"></div>
                     <div class="works_detail_overview">
                         <p>内容：仮想案件の制作</p>
 
@@ -77,9 +78,7 @@
                         <p>制作期間：16日間</p>
                     </div>
                 </div>
-                <div class="fluid-shape"></div>
             </div>
-
             <div class="pdc_obj_description">
                 <dl class="objective">
                     <dt>目的・背景</dt>
@@ -129,7 +128,7 @@
         </section>
 
         <footer>
-            <div class="footershape"><img src="./images/_shape06_.png"></div>
+            <div class="footershape"><img src="./images/shape06.png"></div>
             <p class="js-scroll scroll-top scrollview"><a href="#introduction">Scroll</a></p>
             <p class="js-pagetop scroll-top"><a href="#">Page Top</a></p>
             <p class="footertitle">Kiyomi Seino<br>
@@ -215,47 +214,6 @@
             slideAnime();/* アニメーション用の関数を呼ぶ*/
         });
         // ↑↑ テキスト上から流れてくるここまで
-
-        // ↓↓テキストランダムに表示
-        var Obj = {
-            loop: false,
-            minDisplayTime: 2000,// アニメーションの間隔時間
-            initialDelay: 500, // アニメーション開始までの遅延時間
-            autoStart: true,
-            in: {
-                effect: 'fadeInUp',//animate.css の中にある採用したい動きのクラス名
-                delayScale: 0.5,// 遅延時間の指数
-                delay: 100,// 文字ごとの遅延時間
-                sync: false,// アニメーションをすべての文字に同時適用するかどうか
-                shuffle: true,// 文字表示がランダムな順に表示されるかどうか
-            },
-            out: {// 終了時のアニメーション設定をしたい場合はここに追記
-            }
-        }
-        var element
-        //初期設定
-        function RandomInit() {
-            element = $(".randomAnime");
-            $(element[0]).textillate(Obj);
-        }
-
-        function RandomAnimeControl() {
-            var elemPos = $(element[1]).offset().top - 50;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-
-            if (scroll >= elemPos - windowHeight) {
-                $(element[1]).textillate(Obj);
-            }
-        }
-
-        // 画面が読み込まれたらすぐに動かしたい場合の記述
-        $(window).on('load', function () {
-            RandomInit(); /*初期設定を読み込み*/
-            RandomAnimeControl();/*アニメーション用の関数を呼ぶ*/
-        });//ここまで画面が読み込まれたらすぐに動かしたい場合の記述
-
-        // ↑↑テキストランダムに表示
 
         // ==↓↓画面ロードでフワッと表示 ==
         function load_effect() {

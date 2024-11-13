@@ -304,9 +304,6 @@ textarea.c-form__input {
   display: flex;
   flex-flow: column;
   position: relative;
-  /* background: url("../images/shape-works.png") no-repeat center center; */
-  background-size: cover; /* シェイプ画像を背景に設定*/
-  /* padding: 20px; */
 }
 
 .works_detail_intro {
@@ -323,9 +320,18 @@ textarea.c-form__input {
   z-index: 1; /* シェイプの上に表示*/
 }
 
+.fluid-shape {
+  position: absolute;
+  right: 240px; /* 左右からの位置指定 */
+  top: 600px; /* 上からの位置指定 */
+  z-index: -1;
+  max-width: 550px;
+  overflow: hidden;
+}
+
 .pdc_obj_description {
   max-width: 1000px;
-  margin: 60px auto;
+  margin: 100px auto;
   display: flex;
   flex-flow: column;
 }
