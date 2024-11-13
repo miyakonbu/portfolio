@@ -303,24 +303,22 @@ textarea.c-form__input {
   margin: 50px auto;
   display: flex;
   flex-flow: column;
+  position: relative;
 }
 
 .works_detail_intro {
   margin: 50px auto;
-  max-width: 640px;
-  padding: 40px;
+  max-width: 600px;
+  /* padding: 40px; */
   position: relative;
 }
 
-.works_detail_intro img {
+.worksshape-a {
   position: absolute;
-  max-width: 600px;
-  top: 60px;
-  right: 0;
-  bottom: 0;
-  left: -150px;
-  margin: auto;
-  z-index: -1;
+  max-width: 400px;
+  right: 40%;
+  top: 600px;
+  z-index: -3;
 }
 
 .works_detail_overview p {
