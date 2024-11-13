@@ -54,8 +54,6 @@
             </div>
         </header>
         <section id="about_me">
-            <!-- <h1 class="lopages_title">自己紹介と<br>
-                スキルについて</h1> -->
             <div class="works_container-logo">
                 <p class="page-logo"><span class="slide-in upAnimeLoad"><span
                             class="slide-in_innerupAnimeInner">ABOUT</span></span></p>
@@ -162,7 +160,7 @@
         </section>
 
         <footer>
-            <p class="js-scroll scroll-top scrollview"><a href="#introduction">Scroll</a></p>
+            <p class="js-scroll scroll-top scrollview"><a href="#contact">Scroll</a></p>
             <p class="js-pagetop scroll-top"><a href="#">Page Top</a></p>
             <p class="footertitle"><span class="subtitle slide-in upAnimeScroll"><span
                         class="slide-in_innerupAnimeInner">Kiyomi Seino</span></span><br>
@@ -199,7 +197,7 @@
         //スクロールした際の動きを関数でまとめる
         function PageTopCheck() {
             var winScrollTop = $(this).scrollTop();
-            var secondTop = $("#introduction").offset().top - 150; //#area-2の上から150pxの位置まで来たら
+            var secondTop = $("#contact").offset().top - 150; //#area-2の上から150pxの位置まで来たら
             if (winScrollTop >= secondTop) {
                 $('.js-scroll').removeClass('scroll-view');//.js-scrollからscroll-viewというクラス名を除去
                 $('.js-pagetop').addClass('scroll-view');//.js-pagetopにscroll-viewというクラス名を付与
@@ -211,7 +209,7 @@
         //scrollクリックした際の動き
         $('.scroll-top a').click(function () {
             var elmHash = $(this).attr('href'); //hrefの内容を取得
-            if (elmHash == "#introduction") {//もし、リンク先のhref の後が#area-2の場合
+            if (elmHash == "#contact") {//もし、リンク先のhref の後が#area-2の場合
                 var pos = $(elmHash).offset().top;
                 $('body,html').animate({ scrollTop: pos }, 50); //#area-2にスクロール
             } else {
