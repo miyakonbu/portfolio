@@ -304,21 +304,15 @@ textarea.c-form__input {
   display: flex;
   flex-flow: column;
   position: relative;
+  /* background: url("../images/shape-works.png") no-repeat center center; */
+  background-size: cover; /* シェイプ画像を背景に設定*/
+  /* padding: 20px; */
 }
 
 .works_detail_intro {
   margin: 50px auto;
   max-width: 600px;
   /* padding: 40px; */
-  position: relative;
-}
-
-.worksshape-a {
-  position: absolute;
-  max-width: 400px;
-  right: 40%;
-  top: 600px;
-  z-index: -3;
 }
 
 .works_detail_overview p {
@@ -326,7 +320,7 @@ textarea.c-form__input {
   font-weight: 400;
   letter-spacing: 0.05em;
   margin-top: 35px;
-  z-index: 0;
+  z-index: 1; /* シェイプの上に表示*/
 }
 
 .pdc_obj_description {
