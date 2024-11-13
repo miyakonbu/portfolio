@@ -176,8 +176,7 @@ _:-ms-lang(x),
   right: 0;
 }
 
-/*=== 流れるテキスト ===*/
-
+/*=== 上から流れてくるテキスト ===*/
 /*全共通*/
 
 .slide-in {
@@ -185,12 +184,13 @@ _:-ms-lang(x),
   display: inline-block;
 }
 
-.slide-in_inner {
+.slide-in_innerupAnimeInner {
   display: inline-block;
 }
 
 /* 上下のアニメーション*/
-.upAnime {
+.upAnimeLoad,
+.upAnimeScroll {
   opacity: 0; /* 事前に透過0 にして消しておく*/
 }
 
