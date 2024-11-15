@@ -308,10 +308,14 @@
     margin-left: 0;
   }
 
-  .works_detail_intro img {
+  .works_detail_intro {
+    max-width: 95%; /* 親要素の幅を調整 */
+  }
+
+  /* .works_detail_intro img {
     width: 180%;
     left: -115px;
-  }
+  } */
 
   .objective {
     flex-direction: column;
