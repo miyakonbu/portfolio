@@ -54,7 +54,8 @@
     </header>
     <section id="works_bn001">
         <div class="works_container-logo">
-            <p class="page-logo">WORKS</p>
+            <p class="page-logo"><span class="slide-in upAnimeLoad"><span
+                        class="slide-in_innerupAnimeInner">WORKS</span></span></p>
             <p class="page-logo-text">仮想案件制作</p>
             <h1 class="lopages_title_works">
                 プレミアム価格帯ハンバーガー<br>
@@ -66,7 +67,7 @@
             <img class="bn_img" src="./images/work_bn_a01.jpg" alt="ハンバーガー店新商品バナー高級感ver01">
             <img class="bn_img" src="./images/work_bn_b01.jpg" alt="ハンバーガー店新商品バナーPOPver02">
             <div class="works_detail_intro">
-                <img class="fluid-shape" src="./images/shape-works.png">
+                <img class="fluid-shape" src="./images/shape-works.svg">
                 <div class="works_detail_overview">
                     <p>内容：仮想案件の制作</p>
 
@@ -124,11 +125,15 @@
     </section>
 
     <footer>
-        <div class="footershape"><img src="./images/_shape06_.png"></div>
+        <div class="footershape"><img src="./images/shape-04.svg"></div>
         <p class="js-scroll scroll-top scrollview"><a href="#introduction">Scroll</a></p>
         <p class="js-pagetop scroll-top"><a href="#">Page Top</a></p>
-        <p class="footertitle">Kiyomi Seino<br>
-            Portfolio Website. </p>
+        <p class="footertitle"><span class="subtitle slide-in upAnimeScroll"><span
+                    class="slide-in_innerupAnimeInner">Kiyomi Seino</span></span><br>
+            <span class="subtitle slide-in upAnimeScroll"><span class="slide-in_innerupAnimeInner">Portfolio
+                    Website.
+                </span></span>
+        </p>
         <nav class="pc_nav_footer">
             <ul>
                 <li><a href="https://miyakonbu.github.io/portfolio/">HOME</a></li>
@@ -183,6 +188,58 @@
         });
         // ↑↑右側scroll/pageTOPここまで
 
+        // ↓↓テキスト上から流れてくる
+        function slideAnimeLoad() {
+            //====上に動くアニメーションここから===
+            $('.upAnimeLoad').each(function () {
+                var elemPos = $(this).offset().top - 50;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll >= elemPos - windowHeight) {
+                    // 上から下へ表示するクラスを付与
+                    // テキスト要素を挟む親要素（上）とテキスト要素を元位置でアニメーションをおこなう
+                    $(this).addClass("slideAnimeUpDown");
+                    // 要素を上枠外に移動しCSS アニメーションで上から元の位置に移動
+                    $(this).children(".upAnimeInner").addClass("slideAnimeDownUp");
+                    // 子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
+                } else {
+                    // 上から下へ表示するクラスを取り除く
+                    $(this).removeClass("slideAnimeUpDown");
+                    $(this).children(".upAnimeInner").removeClass("slideAnimeDownUp");
+                }
+            });
+        }
+        function slideAnimeScroll() {
+            //====上に動くアニメーションここから===
+            $('.upAnimeScroll').each(function () {
+                var elemPos = $(this).offset().top - 50;
+                var scroll = $(window).scrollTop();
+                var windowHeight = $(window).height();
+                if (scroll >= elemPos - windowHeight) {
+                    // 上から下へ表示するクラスを付与
+                    // テキスト要素を挟む親要素（上）とテキスト要素を元位置でアニメーションをおこなう
+                    $(this).addClass("slideAnimeUpDown");
+                    // 要素を上枠外に移動しCSS アニメーションで上から元の位置に移動
+                    $(this).children(".upAnimeInner").addClass("slideAnimeDownUp");
+                    // 子要素は親要素のアニメーションに影響されないように逆の指定をし元の位置をキープするアニメーションをおこなう
+                } else {
+                    // 上から下へ表示するクラスを取り除く
+                    $(this).removeClass("slideAnimeUpDown");
+                    $(this).children(".upAnimeInner").removeClass("slideAnimeDownUp");
+                }
+            });
+        }
+        // 画面が読み込まれたらすぐに動くアニメーションを実行
+        $(window).on('load', function () {
+            slideAnimeLoad();
+            slideAnimeScroll(); // スクロールアニメーションの初期チェック
+        });
+
+        // 画面をスクロールをしたらアニメーションを実行
+        $(window).scroll(function () {
+            slideAnimeScroll();
+        });
+        // ↑↑ テキスト上から流れてくるここまで
     </script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

@@ -47,7 +47,7 @@
   /* ABOUT */
   #about {
     max-width: 850px;
-    margin: 200px auto 0;
+    margin: 150px auto 0;
     padding: 0 15px 0 15px;
   }
 
@@ -81,6 +81,7 @@
   }
 
   #works {
+    margin: 90px auto 0;
     max-width: 850px;
     padding: 0 15px 0 15px;
   }

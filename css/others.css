@@ -357,10 +357,10 @@ textarea.c-form__input {
 
 .footershape {
   position: absolute;
-  right: 500px; /* 左右からの位置指定 */
-  top: -200px; /* 上からの位置指定 */
+  right: -200px; /* 左右からの位置指定 */
+  top: -400px; /* 上からの位置指定 */
   z-index: -1;
-  max-width: 600px;
+  width: 700px;
   overflow: hidden;
 }
 
@@ -392,7 +392,7 @@ textarea.c-form__input {
   right: 50px; /* 左右からの位置指定 */
   top: -200px; /* 上からの位置指定 */
   z-index: -1;
-  max-width: 450px;
+  width: 550px;
   overflow: hidden;
 }
 
@@ -401,7 +401,7 @@ textarea.c-form__input {
   left: -100px; /* 左右からの位置指定 */
   top: -150px; /* 上からの位置指定 */
   z-index: -1;
-  max-width: 350px;
+  width: 450px;
   overflow: hidden;
 }
 
