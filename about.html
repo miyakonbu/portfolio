@@ -119,7 +119,8 @@
 
         <section id="contact">
             <h2><span class="subtitle01">お仕事のご依頼やお問合わせ</span>
-                <span class="subtitle">CONTACT</span>
+                <span class="subtitle slide-in upAnimeScroll"><span
+                        class="slide-in_innerupAnimeInner">CONTACT</span></span>
             </h2>
             <div class="contactshape02"><img src="./images/shape-05.svg"></div>
             <div class="contactshape01"><img src="./images/shape-03.svg"></div>
@@ -246,7 +247,7 @@
         }
         function slideAnimeScroll() {
             //====上に動くアニメーションここから===
-            $('.upAnimeLoadScroll').each(function () {
+            $('.upAnimeScroll').each(function () {
                 var elemPos = $(this).offset().top - 50;
                 var scroll = $(window).scrollTop();
                 var windowHeight = $(window).height();

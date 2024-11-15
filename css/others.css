@@ -308,8 +308,8 @@ textarea.c-form__input {
 
 .works_detail_intro {
   margin: 50px auto;
-  max-width: 600px;
-  /* padding: 40px; */
+  max-width: 800px;
+  position: relative;
 }
 
 .works_detail_overview p {
@@ -322,11 +322,12 @@ textarea.c-form__input {
 
 .fluid-shape {
   position: absolute;
-  right: 240px; /* 左右からの位置指定 */
-  top: 600px; /* 上からの位置指定 */
+  left: 50%; /* 左右中央に配置 */
+  top: 60%; /* 上下中央に配置 */
+  transform: translate(-50%, -50%); /* 中央に揃える */
   z-index: -1;
-  max-width: 550px;
-  overflow: hidden;
+  max-width: none;
+  width: 600px;
 }
 
 .pdc_obj_description {
