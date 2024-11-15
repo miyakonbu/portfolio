@@ -169,7 +169,7 @@
   left: -350px; /* 左右からの位置指定 */
   top: -60px; /* 上からの位置指定 */
   z-index: -1;
-  width: 600px;
+  width: 550px;
   overflow: hidden;
 }
 
@@ -330,11 +330,31 @@ textarea.c-form__input {
   width: 600px;
 }
 
+.fluid-shape02 {
+  position: absolute;
+  left: 130%;
+  top: 120%;
+  transform: translate(-50%, -50%); /* 中央に揃える */
+  z-index: -3;
+  max-width: none;
+  width: 300px;
+}
+
 .pdc_obj_description {
   max-width: 1000px;
   margin: 100px auto;
   display: flex;
   flex-flow: column;
+  position: relative;
+}
+
+.works_lifeshape {
+  position: absolute;
+  left: -400px; /* 左右からの位置指定 */
+  top: 400px; /* 上からの位置指定 */
+  z-index: -1;
+  width: 900px;
+  overflow: hidden;
 }
 
 .objective {

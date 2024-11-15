@@ -74,7 +74,7 @@ img {
 .scroll-top {
   /*表示位置*/
   position: fixed;
-  right: 3%;
+  right: 6%;
   bottom: 100px;
   z-index: 2;
   /*はじめは非表示*/
