@@ -322,18 +322,18 @@ textarea.c-form__input {
 
 .fluid-shape {
   position: absolute;
-  left: 50%; /* 左右中央に配置 */
-  top: 60%; /* 上下中央に配置 */
+  left: 35%; /* 左右中央に配置 */
+  top: 65%; /* 上下中央に配置 */
   transform: translate(-50%, -50%); /* 中央に揃える */
   z-index: -1;
   max-width: none;
-  width: 600px;
+  width: 550px;
 }
 
 .fluid-shape02 {
   position: absolute;
   left: 130%;
-  top: 120%;
+  top: 110%;
   transform: translate(-50%, -50%); /* 中央に揃える */
   z-index: -3;
   max-width: none;
@@ -365,6 +365,12 @@ textarea.c-form__input {
   width: 20%;
   margin-left: 20px;
   margin-right: 10px;
+  font-weight: bold;
+  color: #336666;
+}
+
+.marker {
+  background: linear-gradient(transparent 60%, #b6d3d1 60%);
 }
 
 .objective dd {
@@ -373,6 +379,14 @@ textarea.c-form__input {
 
 .objective p {
   margin-bottom: 20px;
+}
+
+.objectivetext {
+  line-height: 2.5;
+}
+
+.objectivesubttl {
+  margin-top: 40px;
 }
 
 .footershape {
