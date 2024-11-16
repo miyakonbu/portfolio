@@ -370,7 +370,10 @@ textarea.c-form__input {
 }
 
 .marker {
-  background: linear-gradient(transparent 60%, #b6d3d1 60%);
+  color: #336666;
+  text-decoration-line: underline;
+  text-underline-offset: 2px; /* 位置 */
+  text-decoration-thickness: 4px; /* 太さ */
 }
 
 .objective dd {

@@ -329,13 +329,12 @@
     width: 600px;
   }
 
-  /* .works_detail_intro img {
-    width: 180%;
-    left: -115px;
-  } */
-
   .objective {
     flex-direction: column;
+  }
+
+  .objective p {
+    display: inline-block;
   }
 
   .objective dt {
@@ -362,36 +361,5 @@
   .bn_img {
     max-width: 100%;
     object-fit: contain;
-  }
-
-  /* マーカー */
-  .marker {
-    background: linear-gradient(transparent 60%, #b6d3d1 80%);
-  }
-}
-
-/* 画面幅が600px以下の場合のスタイル */
-@media (max-width: 600px) {
-  .marker {
-    background: linear-gradient(
-      transparent 90%,
-      #b6d3d1 90%
-    ); /* 調整したマーカー */
-  }
-}
-
-/* 画面幅が530px以下の場合のスタイル */
-@media (max-width: 530px) {
-  .marker {
-    background: linear-gradient(
-      transparent 100%,
-      #b6d3d1 100%
-    ); /* 調整したマーカー */
-    font-size: 14px; /* 文字サイズを小さくする */
-    line-height: 1.5; /* 行間を調整する */
-  }
-
-  .objective p {
-    font-size: 14px;
   }
 }
