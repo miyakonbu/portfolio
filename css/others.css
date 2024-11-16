@@ -373,7 +373,7 @@ textarea.c-form__input {
   color: #336666;
   text-decoration-line: underline;
   text-underline-offset: 2px; /* 位置 */
-  text-decoration-thickness: 4px; /* 太さ */
+  text-decoration-thickness: 3px; /* 太さ */
 }
 
 .objective dd {
