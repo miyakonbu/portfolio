@@ -34,10 +34,6 @@ h2 {
   color: inherit;
 }
 
-/* body {
-  text-align: center;
-} */
-
 li {
   margin: 0;
   padding: 0;
@@ -63,9 +59,16 @@ ul {
 
 img {
   overflow-clip-margin: initial; /* デフォルトを上書き */
+  overflow: hidden; /* 影響を緩和するためにoverflowをhiddenに設定 */
   max-width: 100%;
   vertical-align: bottom;
   border: none;
+}
+
+video,
+canvas {
+  overflow-clip-margin: initial; /* overflow-clip-marginを初期値に設定 */
+  overflow: hidden; /* 影響を緩和するためにoverflowをhiddenに設定 */
 }
 
 /* ==右側のスクロール表示== */
