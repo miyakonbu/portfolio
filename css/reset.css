@@ -62,7 +62,6 @@ ul {
 }
 
 img {
-  overflow: visible; /* デフォルトを上書き */
   overflow-clip-margin: initial; /* デフォルトを上書き */
   max-width: 100%;
   vertical-align: bottom;
