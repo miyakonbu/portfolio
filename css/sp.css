@@ -25,6 +25,7 @@
     display: inline-block; /* 回転させるために必要 */
     transform-origin: center;
     transform: rotate(-15deg);
+    bottom: 90%;
   }
 
   .scroll {
