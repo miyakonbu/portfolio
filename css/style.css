@@ -193,7 +193,7 @@ svg#mask {
 
 .heart {
   width: 38px;
-  height: 47px;
+  /* height: 47px; */
   position: absolute;
   left: 96%;
   bottom: 105%;
