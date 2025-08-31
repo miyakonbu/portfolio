@@ -22,10 +22,11 @@
   .heart {
     width: 24px;
     left: 93%;
-    display: inline-block; /* 回転させるために必要 */
+    /* display: inline-block; 回転させるために必要 */
+    display: block;
     transform-origin: center;
     transform: rotate(-15deg);
-    bottom: 90%;
+    bottom: 100%;
   }
 
   .scroll {

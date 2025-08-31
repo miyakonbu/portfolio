@@ -169,11 +169,16 @@ header {
 }
 
 .airplane {
-  width: 50%;
   position: relative;
+  /* width: 50%; */
+  width: 95%;
   margin-left: 20px;
+  display: block;
   box-sizing: border-box;
+  line-height: 0;
+  height: auto;
 }
+
 svg#mask {
   width: 95%;
   height: fit-content;
@@ -197,6 +202,7 @@ svg#mask {
   position: absolute;
   left: 96%;
   bottom: 105%;
+  display: block;
 }
 
 /* ==↓↓ハートを揺らす== */
@@ -205,6 +211,7 @@ svg#mask {
 }
 .target {
   animation: floating-y 1.8s ease-in-out infinite alternate-reverse;
+  display: block;
 }
 
 @keyframes floating-x {
