@@ -170,8 +170,7 @@ header {
 
 .airplane {
   position: relative;
-  /* width: 50%; */
-  width: 95%;
+  width: 50%;
   margin-left: 20px;
   display: block;
   box-sizing: border-box;
