@@ -29,7 +29,6 @@
     height: 100%;
     display: block; /* 念のため明示 */
   }
-  /* ▲SPの時のみ */
 
   .heart {
     width: 24px;
