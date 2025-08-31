@@ -17,7 +17,18 @@
     width: 100%;
     /* margin-top: 30px; */
     margin-left: 0;
+    box-sizing: border-box;
+    aspect-ratio: 1199.86 / 594.63; /* ← SVG viewBox と同じ比率 */
   }
+
+  /* ▼SPの時のみ */
+  .svg#mask {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /* ▲SPの時のみ */
 
   .heart {
     width: 24px;
