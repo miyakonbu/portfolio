@@ -22,6 +22,7 @@
   .heart {
     width: 24px;
     left: 93%;
+    height: auto;
     /* display: inline-block; 回転させるために必要 */
     display: block;
     transform-origin: center;
